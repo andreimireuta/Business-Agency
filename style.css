@@ -35,7 +35,12 @@ html{
 .banner-heading{
     margin-bottom: 4rem;
     height: 20rem;
-}
+    perspective: 50rem;  /*perspectiva este folosita pentru a da unui obiect o perspectiva 3d
+                            perspectiva defineste cat de departe este obiectul fata de utilizator
+                            o valoare mai mica va avea ca rezultat o perspectiva 3d mai intensa decat o valaore mai mare*/
+
+    overflow: hidden;
+                        }
 
 .banner-heading span{
     font-family: "Oswald", sans-serif;
@@ -44,6 +49,12 @@ html{
     text-transform: uppercase;
     color: #fff;
     text-shadow: .3rem .3rem .6rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    transform: translateZ(8rem);
+    opacity: 0;
 }
 .banner-paragraf{
     font-size: 4rem;
@@ -57,6 +68,52 @@ html{
     box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.6);
 
 } 
+.heading1{
+    animation:animateHeading 12s 3s infinite;
+}
+.heading2{
+    animation:animateHeading 12s 6s infinite;
+}
+.heading3{
+    animation:animateHeading 12s 9s infinite;
+}
+.heading4{
+    animation:animateHeading 12s 12s infinite;
+}
+/* Am creat o aniamtie folosind keyframes
+    I-am dat la efecte diferite in functie de cat la % este incarcata animatia
+    Pentru a le rula pe rand pe fiecare le-am dat un deelay intre ele de 3,6,9,12s de la inceputul animatiei
+
+*/
+
+@keyframes animateHeading{
+    0%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing:3rem;
+    }
+    3%{
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    25%{
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 1.5rem;
+    }
+    28%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+    100%{
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 3rem;
+    }
+
+}
 .banner-btn{
     width: 30rem;
     height:6rem;
@@ -70,3 +127,4 @@ html{
     text-shadow: 0.2rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
