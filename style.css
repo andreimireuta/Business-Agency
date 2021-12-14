@@ -19,7 +19,7 @@ html{
 .section1{
     width: 100%;
     height:100vh;
-    background: url(images/dark-bg.jpeg) no-repeat;
+    background: url(images/bgdark1.jpg) no-repeat;
     background-size: cover;
 
 }
@@ -126,5 +126,134 @@ html{
     box-shadow:1rem 2rem 3rem rgba(0, 0, 0, 0.5);
     text-shadow: 0.2rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+/* ------------------------------------------navbar styling--------------------------- */
+.navbar{
+    position: fixed;  /*pentru a face ca navbarul sa stea fix in aceeasi pozitie*/
+    width: 100%;
+    height: 8vh;
+    top:0;
+    /* background-color: sienna; */
+    background-color: rgba(0, 0, 0, 0.97);
+    z-index: 10;
+    padding: 3rem;
+    transition:height 0.5s; 
+}
+
+.change{
+    height: 100vh;
+}
+.nav-link{
+    color: white;
+}
+
+.logo{
+    position: absolute;
+    top:1rem;
+    left: 4rem;
+}
+.logo a{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#eee;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+}
+.logo span{
+    font-size:18px;
+    color:sienna;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.nav-list{
+    position:absolute;
+    top: 25%;
+    left:50%;
+    transform: translateX(-50%);  /*am dat elemetul mai in dreapta pentru a parea ca se incarca */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility:hidden; 
+    transition:all 0.2s;
+}
+
+.change .nav-list{
+    opacity:1;
+    visibility:visible;
+    transition:all 0.7s 0.5s;
+}
+.nav-link{
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    letter-spacing:0.4rem;
+    color:#fff;
+    margin:2rem 0;
+    transition:color 0.5s;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color:sienna;
+}
+
+.menu{
+    width:4rem;
+    position: fixed;
+    height:4rem;
+    top: 2rem;
+    right: 4rem;
+    z-index:100;
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+   
+}
+.menu1{
+    width:4rem;
+    position: fixed;
+    height:4rem;
+    top: 2rem;
+    right: 4rem;
+    z-index:100;
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    visibility:hidden;
+    
+}
+.visible-hidden{
+    visibility:hidden;
+}
+.visible-active{
+    visibility:visible;
+    transition:visibility 0.4s;
+}
+.line{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #eee;
+}
+.linee{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #eee;
+}
+.line1{
+    width:75%;
+}
+.line3{
+    margin-left: auto;
+    width: 75%;
+}
+
+.line5{
+    transform:rotate(-45deg) translate(1rem);  /*am rotit 45 de grade la dreapta si am dat in jos cu 1 rem */
+}
+.line4{
+    transform:rotate(45deg) translate(1rem);
 }
 
